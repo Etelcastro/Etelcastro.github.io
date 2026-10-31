@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etel Castro · Desarrolladora Full Stack</title>
+  <meta name="description" content="Etel Castro, desarrolladora full stack. Aplicaciones web completas, de la interfaz al servidor, con inteligencia artificial cuando suma.">
+  <meta name="author" content="Etel Castro">
+  <meta property="og:title" content="Etel Castro · Desarrolladora Full Stack">
+  <meta property="og:description" content="Aplicaciones web completas, de la interfaz al servidor, con inteligencia artificial cuando suma.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://etelcastro.github.io/">
+  <meta property="og:image" content="https://etelcastro.github.io/img/aldia.webp">
+  <meta name="theme-color" content="#f6f2ea" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1c1a17" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // El tema elegido se aplica antes de pintar: sin el parpadeo del tema del sistema.
+    try { const t = localStorage.getItem("tema"); if (t === "claro" || t === "oscuro") document.documentElement.dataset.tema = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="barra">
+    <div class="contenedor barra-dentro">
+      <a class="marca" href="#inicio" aria-label="Etel Castro, inicio">
+        <span class="monograma" aria-hidden="true">EC</span>
+        <span>Etel Castro</span>
+      </a>
+      <nav aria-label="Secciones">
+        <ul class="menu">
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="tema" id="tema" type="button" aria-label="Cambiar tema">
+        <svg class="icono-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="icono-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+        <span class="tema-texto" id="tema-texto">Tema</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="heroe" id="inicio">
+      <div class="contenedor heroe-dentro">
+        <p class="antetitulo">Desarrolladora Full Stack</p>
+        <h1>Hola, soy <em>Etel Castro</em>.<br>Construyo software que la gente usa de verdad.</h1>
+        <p class="entrada">Aplicaciones web completas, de la interfaz al servidor, con inteligencia artificial cuando de verdad suma. Pienso en quien las va a usar a diario y las pruebo a fondo antes de entregarlas.</p>
+        <div class="acciones">
+          <a class="boton principal" href="#proyectos">Ver proyectos</a>
+          <a class="boton" href="mailto:etelcastro22@gmail.com">Escríbeme</a>
+        </div>
+        <ul class="pila" aria-label="Tecnologías con las que trabajo">
+          <li>Python</li><li>JavaScript</li><li>FastAPI</li><li>HTML y CSS</li><li>SQL</li><li>Cloudflare</li><li>IA local</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion" id="proyectos" aria-labelledby="titulo-proyectos">
+      <div class="contenedor">
+        <header class="cabecera-seccion">
+          <p class="antetitulo">Proyectos</p>
+          <h2 id="titulo-proyectos">Lo que he construido</h2>
+        </header>
+
+        <article class="proyecto destacado aparece">
+          <a class="captura" href="https://github.com/Etelcastro/AlDia" aria-label="Ver el código de AlDía">
+            <img src="img/aldia.webp" width="1280" height="1500" alt="AlDía: lecturas de cada medidor y reparto del recibo de luz del mes" loading="lazy">
+          </a>
+          <div class="proyecto-texto">
+            <p class="etiqueta">Proyecto principal · Python + IA</p>
+            <h3>AlDía</h3>
+            <p class="resumen">Reparte los recibos de luz y agua entre varios medidores. El vecino manda la foto de su medidor desde el celular, una IA que corre en la propia PC lee el número y el programa calcula cuánto paga cada uno.</p>
+            <ul class="logros">
+              <li><strong>IA local:</strong> lee fotos de medidores y recibos (foto o PDF) con un modelo de visión en Ollama; ninguna foto va a terceros.</li>
+              <li><strong>Funciona con la PC apagada:</strong> un buzón en Cloudflare Workers guarda las fotos hasta que el programa las recoge.</li>
+              <li><strong>Para no técnicos:</strong> QR por vecino, pedido por WhatsApp en un clic, Excel del mes y copias de seguridad automáticas.</li>
+              <li><strong>349 pruebas automatizadas</strong> y una revisión de seguridad antes de publicarlo.</li>
+            </ul>
+            <ul class="tecnologias" aria-label="Tecnologías">
+              <li>Python</li><li>JavaScript</li><li>Ollama</li><li>Cloudflare Workers</li><li>KV</li><li>openpyxl</li>
+            </ul>
+            <div class="enlaces">
+              <a class="enlace" href="https://github.com/Etelcastro/AlDia">Ver código <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <div class="rejilla">
+          <article class="proyecto aparece">
+            <div class="captura ilustracion" role="img" aria-label="Ilustración: seguimiento de un embarque, de la salida de fábrica a la llegada al almacén">
+              <div class="mini-app">
+                <div class="mini-cabecera"><span>Embarque</span><span class="mini-chip">En tránsito</span></div>
+                <ol class="linea-tiempo">
+                  <li class="hecho"><span>Salida de fábrica</span><time>02 oct</time></li>
+                  <li class="hecho"><span>Zarpe</span><time>09 oct</time></li>
+                  <li class="ahora"><span>Llegada a puerto</span><time>ETA 31 oct</time></li>
+                  <li><span>Despacho de aduana</span><time>—</time></li>
+                  <li><span>Llegada al almacén</span><time>—</time></li>
+                </ol>
+                <div class="mini-pie"><span>Marítimo</span><span>4 órdenes de compra</span></div>
+              </div>
+            </div>
+            <div class="proyecto-texto">
+              <p class="etiqueta">Para una empresa · Python</p>
+              <h3>Tránsito de cargas</h3>
+              <p class="resumen">Sistema interno para seguir órdenes de compra y embarques marítimos, aéreos, terrestres y courier, desde la fábrica hasta el almacén.</p>
+              <ul class="logros">
+                <li>Calcula la cadena de fechas (zarpe, llegada a puerto, almacén) según la ruta y avisa de lo atrasado.</li>
+                <li>Lee facturas, conocimientos de embarque y declaraciones de aduana en PDF, también escaneados (OCR).</li>
+                <li>Importa el Excel de seguimiento de la empresa sin duplicar ni pisar datos.</li>
+              </ul>
+              <ul class="tecnologias" aria-label="Tecnologías">
+                <li>FastAPI</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>Jinja2</li><li>OCR</li><li>Docker</li>
+              </ul>
+              <p class="nota">Código privado del cliente.</p>
+            </div>
+          </article>
+
+          <article class="proyecto aparece">
+            <a class="captura" href="https://etelcastro.github.io/cafe-tierra-viva/" aria-label="Ver el sitio de Café Tierra Viva">
+              <img src="img/cafe-tierra-viva.webp" width="1280" height="800" alt="Sitio de la Cooperativa Agraria Café Tierra Viva" loading="lazy">
+            </a>
+            <div class="proyecto-texto">
+              <p class="etiqueta">Sitio web · Cooperativa</p>
+              <h3>Café Tierra Viva</h3>
+              <p class="resumen">Sitio para una cooperativa agraria de café: quiénes son, cómo comercializan, su proceso y calidad, con contacto directo por WhatsApp.</p>
+              <ul class="tecnologias" aria-label="Tecnologías">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive</li><li>GitHub Pages</li>
+              </ul>
+              <div class="enlaces">
+                <a class="enlace" href="https://etelcastro.github.io/cafe-tierra-viva/">Ver sitio <span aria-hidden="true">↗</span></a>
+                <a class="enlace" href="https://github.com/Etelcastro/cafe-tierra-viva">Código <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proyecto aparece">
+            <a class="captura" href="https://github.com/Etelcastro/Proyecto-Monte-de-Oro" aria-label="Ver el código de Monte de Oro">
+              <img src="img/monte-de-oro.webp" width="1280" height="800" alt="Tienda de café molido Monte de Oro" loading="lazy">
+            </a>
+            <div class="proyecto-texto">
+              <p class="etiqueta">Tienda en línea · Frontend</p>
+              <h3>Monte de Oro</h3>
+              <p class="resumen">Tienda de café molido artesanal con catálogo de variedades, carrito de compras y promociones con descuento automático.</p>
+              <ul class="tecnologias" aria-label="Tecnologías">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Carrito</li>
+              </ul>
+              <div class="enlaces">
+                <a class="enlace" href="https://github.com/Etelcastro/Proyecto-Monte-de-Oro">Código <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion alterna" id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+      <div class="contenedor sobre-mi">
+        <header class="cabecera-seccion">
+          <p class="antetitulo">Sobre mí</p>
+          <h2 id="titulo-sobre-mi">De la idea a algo que funciona</h2>
+        </header>
+        <div class="sobre-mi-texto">
+          <p>Me gusta resolver problemas concretos con software: desde la página de una cooperativa de café hasta el sistema que una empresa usa cada día para seguir sus embarques, o una aplicación que reparte un recibo entre vecinos leyendo las fotos de sus medidores.</p>
+          <p>Trabajo de punta a punta: diseño la interfaz, programo el servidor y la base de datos, integro inteligencia artificial cuando aporta y automatizo lo repetitivo. Y cuido dos cosas que no se ven pero se notan: que lo use bien alguien que no es técnico, y que esté probado antes de llegar a sus manos.</p>
+        </div>
+        <div class="habilidades">
+          <div class="grupo">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, diseño responsive, accesibilidad, modo claro y oscuro.</p>
+          </div>
+          <div class="grupo">
+            <h3>Backend y datos</h3>
+            <p>Python, FastAPI, SQLAlchemy, PostgreSQL y SQLite, plantillas Jinja2, Excel y PDF.</p>
+          </div>
+          <div class="grupo">
+            <h3>IA y automatización</h3>
+            <p>Modelos de visión locales con Ollama, OCR de documentos, lectura de correos y archivos.</p>
+          </div>
+          <div class="grupo">
+            <h3>Nube y calidad</h3>
+            <p>Cloudflare Workers, GitHub Pages, Docker, git, pruebas automatizadas y revisión de seguridad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor contacto-dentro">
+        <p class="antetitulo">Contacto</p>
+        <h2 id="titulo-contacto">¿Tienes un proyecto en mente?</h2>
+        <p class="entrada">Cuéntame qué necesitas y vemos cómo hacerlo realidad.</p>
+        <div class="acciones">
+          <a class="boton principal" href="mailto:etelcastro22@gmail.com">etelcastro22@gmail.com</a>
+          <a class="boton" href="https://github.com/Etelcastro">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-dentro">
+      <span>© 2026 Etel Castro</span>
+      <a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
