@@ -198,7 +198,7 @@ nav { margin-left: auto; }
 /* ---------- sobre mi ---------- */
 .sobre-mi { display: grid; grid-template-columns: 1fr 1.25fr; gap: 24px 64px; }
 .sobre-mi .cabecera-seccion { margin-bottom: 0; }
-.sobre-mi-texto { display: grid; gap: 18px; font-size: 18px; color: var(--tinta-suave); }
+.sobre-mi-texto { display: grid; gap: 18px; font-size: 18px; color: var(--tinta-suave); text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .habilidades { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 32px; }
 .grupo { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: 14px; padding: 22px; }
 .grupo h3 { font-size: 21px; margin-bottom: 8px; }
@@ -242,6 +242,7 @@ main, .pie { position: relative; z-index: 1; }   /* la barra ya va por encima (s
   .menu { display: none; }
   .tema { margin-left: auto; }
   .rejilla, .habilidades { grid-template-columns: 1fr; }
+  .sobre-mi-texto { text-align: left; }   /* en columna estrecha, justificar deja huecos entre palabras */
   .boton { width: 100%; justify-content: center; }
   .contacto .boton { font-size: 15px; }
 }
