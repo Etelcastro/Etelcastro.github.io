@@ -213,6 +213,12 @@ nav { margin-left: auto; }
 .pie a { text-decoration: none; }
 .pie a:hover { color: var(--tinta); }
 
+/* ---------- constelacion del fondo: puntos que flotan y se unen con lineas (la dibuja main.js en un canvas) ---------- */
+.constelacion { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0; transition: opacity 1s ease; }
+.constelacion.lista { opacity: 1; }
+main, .pie { position: relative; z-index: 1; }   /* la barra ya va por encima (sticky, z-index 10) */
+.con-constelacion .alterna { background: color-mix(in srgb, var(--fondo-alterno) 70%, transparent); }   /* deja verla detras */
+
 /* ---------- aparecer al bajar (sin JS o con movimiento reducido, se ve todo) ---------- */
 .js .aparece { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .js .aparece.visible { opacity: 1; transform: none; }
