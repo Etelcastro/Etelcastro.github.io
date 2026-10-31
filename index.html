@@ -95,22 +95,13 @@
 
         <div class="rejilla">
           <article class="proyecto aparece">
-            <div class="captura ilustracion" role="img" aria-label="Ilustración: seguimiento de un embarque, de la salida de fábrica a la llegada al almacén">
-              <div class="mini-app">
-                <div class="mini-cabecera"><span>Embarque marítimo</span><span class="mini-chip">En tránsito</span></div>
-                <ol class="linea-tiempo">
-                  <li class="hecho"><span>Salida de fábrica</span><time>02 oct</time></li>
-                  <li class="hecho"><span>Zarpe</span><time>09 oct</time></li>
-                  <li class="ahora"><span>Llegada a puerto</span><time>ETA 31 oct</time></li>
-                  <li><span>Despacho de aduana</span><time>—</time></li>
-                  <li><span>Llegada al almacén</span><time>—</time></li>
-                </ol>
-              </div>
-            </div>
+            <a class="captura" href="https://github.com/Etelcastro/seguimiento-de-cargas" aria-label="Ver el código de Seguimiento de cargas">
+              <img src="img/seguimiento-de-cargas.webp" width="864" height="540" alt="Cuadro de mando: lo que pide atención hoy y las próximas llegadas (datos de ejemplo)" loading="lazy">
+            </a>
             <div class="proyecto-texto">
-              <p class="etiqueta">Para una empresa · Python</p>
-              <h3>Tránsito de cargas</h3>
-              <p class="resumen">Sistema interno para seguir órdenes de compra y embarques marítimos, aéreos, terrestres y courier, desde la fábrica hasta el almacén.</p>
+              <p class="etiqueta">Proyecto real · FastAPI</p>
+              <h3>Seguimiento de cargas</h3>
+              <p class="resumen">Sistema para seguir órdenes de compra y embarques marítimos, aéreos, terrestres y courier, desde la fábrica hasta el almacén.</p>
               <ul class="logros">
                 <li>Calcula la cadena de fechas (zarpe, llegada a puerto, almacén) según la ruta y avisa de lo atrasado.</li>
                 <li>Lee facturas, conocimientos de embarque y declaraciones de aduana en PDF, también escaneados (OCR).</li>
@@ -119,7 +110,10 @@
               <ul class="tecnologias" aria-label="Tecnologías">
                 <li>FastAPI</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>Jinja2</li><li>OCR</li><li>Docker</li>
               </ul>
-              <p class="nota">Código privado del cliente.</p>
+              <div class="enlaces">
+                <a class="enlace" href="https://github.com/Etelcastro/seguimiento-de-cargas">Ver código <span aria-hidden="true">↗</span></a>
+              </div>
+              <p class="nota">Hecho para una empresa importadora; publicado con datos ficticios.</p>
             </div>
           </article>
 
